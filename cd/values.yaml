@@ -1,0 +1,9 @@
+agentName: mmagent03
+namespace: mmagent03
+imageRepo: 229560443702.dkr.ecr.us-west-2.amazonaws.com/mmagent03
+agentRuntime: LangGraph
+
+envs:
+  - name: dev
+    depends: None
+    cluster: cnoe-ref-impl
