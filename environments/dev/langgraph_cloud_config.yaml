@@ -1,0 +1,24 @@
+agentName: mmagent03
+envName: dev
+namespace: mmagent03-dev
+
+images:
+  apiServerImage:
+    repository: 229560443702.dkr.ecr.us-west-2.amazonaws.com/mmagent03
+    tag: 0.0.0
+
+apiServer:
+  service:
+    type: ClusterIP
+
+studio:
+  service:
+    type: ClusterIP
+
+postgres:
+  external:
+    enabled: false
+    connectionUrl: postgresql://postgres:XXXXXXX@HOST:5432/DB?sslmode=require
+
+config:
+  existingSecretName: langgraph-cloud-secrets
